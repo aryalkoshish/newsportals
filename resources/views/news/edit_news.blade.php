@@ -54,12 +54,12 @@ Add news
 						</div>
 						<!-- /.box-header -->
 						<div class="box-body pad">
-							<form>
-								<textarea class="summernote" name="description" rows="10" cols="80">
-									Previous Values
-								</textarea>
-							</form>
-						</div>  
+							<div class="mb-10">
+										<textarea class="textarea" placeholder="Place some text here"
+										style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+									</div>
+								</div>
+						 
 						<br>
 						<div class="form-group">
 							<div class="text text-danger">{{$errors->first('title')}}</div>
@@ -77,10 +77,12 @@ Add news
 							<div class="text text-danger">{{$errors->first('description')}}</div>
 							<label for="Description">Description</label><br>
 							<!-- /.box-header -->
-							<textarea class="summernote" rows="10" cols="80" name="description" >
-								This is my textarea to be replaced with CKEditor.
-							</textarea>
-						</div>
+							<div class="mb-10">
+										<textarea class="textarea" placeholder="Place some text here"
+										style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+									</div>
+								</div>
+						
 						<div class="form-group">
 							<!-- checkbox -->
 
@@ -126,16 +128,17 @@ Add news
 								
 							</div>
 						</div>
-
+						<div class="input-group mb-3">
+					<button type="submit" class="btn btn-default bg-green " >Save</button>
+					<button type="submit" class="btn btn-default bg-green " >Cancel</button>
+				</div>
 
 					</div>
-					<div class="input-group mb-3">
-					<button type="submit" class="btn btn-default bg-green " >Save</button>
-				</div>
+					
 				</div>
 
 			</form>
-			<button type="submit" class="btn btn-default bg-green " >Cancel</button>
+			
 		</div>
 	</div>
 </div>

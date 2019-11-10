@@ -23,76 +23,68 @@ Add news
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
+
     <!-- /.content-header -->
- <div class="row">
-        <div class="col-12">
-          <div class="card">
-            <div class="card-header">
-              <h3 class="card-title">DataTable with minimal features & hover style</h3>
-            </div>
-            <!-- /.card-header -->
-            <div class="card-body">
-              <table id="example2" class="table table-bordered table-hover">
-                <thead>
+<section class="content">
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">View Images</h3>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body">
+            <table id="example1" class="table table-bordered table-striped">
+              <thead>
                 <tr>
                   <th>Image</th>
                   <th>Image Title</th>
-                  <th>Image Description</th>
+                  <th>Image</th>
+                  <th>Views</th>
                   <th>Action</th>
-                  
                 </tr>
-                </thead>
-                <tbody>
+              </thead>
+              <tbody>
                 <tr>
                   <td>Trident</td>
                   <td>Internet
                     Explorer 4.0
                   </td>
                   <td>Win 95+</td>
-                  <td>             <!-- split buttons box -->
-                    <div class="card-body">
-                <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                      Action
-                    </button>
-                    <div class="dropdown-menu">
-                      <a class="dropdown-item" href="{{url('edit_image')}}">Edit</a>
-                      <a class="dropdown-item" href="{{url('show_images')}}">View</a>
-                      <a class="dropdown-item" href="#">Delete</a>
-                      
+                  <td> 4</td>
+                  <td><div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        Action
+                      </button>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{{url('show_images')}}"><button>View</button></a>
+                        
+                        <a class="dropdown-item" href="#"><button  data-toggle="modal" data-target="#modal-danger">Delete</button></a>
+                        
+                      </div>
                     </div>
-                  </div>
-                  
-                </div>
-              </div>
-                </td>
-                  
+                    
+                  </div></td>
                 </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 5.0
-                  </td>
-                  <td>Win 95+</td>
-                  <td>5</td>
-                  
-                </tr>
-
-                </tbody>
-                <tfoot>
+                
+              </tbody>
+              <tfoot>
                 <tr>
                   <th>Rendering engine</th>
                   <th>Browser</th>
                   <th>Platform(s)</th>
                   <th>Engine version</th>
-                  
+                  <th>CSS grade</th>
                 </tr>
-                </tfoot>
-              </table>
-            </div>
-            <!-- /.card-body -->
+              </tfoot>
+            </table>
           </div>
-          <!-- /.card -->
+          <!-- /.card-body -->
         </div>
+        
+      </div>
+    </div>
+  </section>
+
         @endsection

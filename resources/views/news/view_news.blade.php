@@ -23,22 +23,24 @@ Add news
     </div><!-- /.container-fluid -->
   </div>
   <!-- /.content-header -->
-  <div class="row">
+      <section class="content">
+      <div class="row">
         <div class="col-12">
           <div class="card">
+            
             <div class="card-header">
-              <h3 class="card-title">DataTable with minimal features & hover style</h3>
+              <h3 class="card-title">All News</h3>
             </div>
             <!-- /.card-header -->
             <div class="card-body">
-              <table id="example2" class="table table-bordered table-hover">
+              <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>Image</th>
-                  <th>Image Title</th>
-                  <th>Image Description</th>
-                  <th>Action</th>
-                  
+                  <th>Rendering engine</th>
+                  <th>Browser</th>
+                  <th>Platform(s)</th>
+                  <th>Engine version</th>
+                  <th>CSS grade</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -48,9 +50,7 @@ Add news
                     Explorer 4.0
                   </td>
                   <td>Win 95+</td>
-                  <td>             <!-- split buttons box -->
-                    <div class="card-body">
-                <div class="input-group mb-3">
+                  <td>                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                       Action
@@ -63,10 +63,8 @@ Add news
                     </div>
                   </div>
                   
-                </div>
-              </div>
-                </td>
-                  
+                </div></td>
+                  <td>X</td>
                 </tr>
                 <tr>
                   <td>Trident</td>
@@ -75,9 +73,61 @@ Add news
                   </td>
                   <td>Win 95+</td>
                   <td>5</td>
-                  
+                  <td>C</td>
                 </tr>
-
+                <tr>
+                  <td>Trident</td>
+                  <td>Internet
+                    Explorer 5.5
+                  </td>
+                  <td>Win 95+</td>
+                  <td>5.5</td>
+                  <td>A</td>
+                </tr>
+                <tr>
+                  <td>Trident</td>
+                  <td>Internet
+                    Explorer 6
+                  </td>
+                  <td>Win 98+</td>
+                  <td>6</td>
+                  <td>A</td>
+                </tr>
+                <tr>
+                  <td>Misc</td>
+                  <td>Links</td>
+                  <td>Text only</td>
+                  <td>-</td>
+                  <td>X</td>
+                </tr>
+                <tr>
+                  <td>Misc</td>
+                  <td>Lynx</td>
+                  <td>Text only</td>
+                  <td>-</td>
+                  <td>X</td>
+                </tr>
+                <tr>
+                  <td>Misc</td>
+                  <td>IE Mobile</td>
+                  <td>Windows Mobile 6</td>
+                  <td>-</td>
+                  <td>C</td>
+                </tr>
+                <tr>
+                  <td>Misc</td>
+                  <td>PSP browser</td>
+                  <td>PSP</td>
+                  <td>-</td>
+                  <td>C</td>
+                </tr>
+                <tr>
+                  <td>Other browsers</td>
+                  <td>All others</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>U</td>
+                </tr>
                 </tbody>
                 <tfoot>
                 <tr>
@@ -85,7 +135,7 @@ Add news
                   <th>Browser</th>
                   <th>Platform(s)</th>
                   <th>Engine version</th>
-                  
+                  <th>CSS grade</th>
                 </tr>
                 </tfoot>
               </table>
@@ -93,4 +143,16 @@ Add news
             <!-- /.card-body -->
           </div>
           <!-- /.card -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+
+
+
+
+
+  
   @endsection

@@ -31,7 +31,7 @@ Add news
         	<div class="card">
 			<!-- form start -->
 			<form role="form">
-				<div class="box-body" style="padding-left: 15px;">
+				<div class="box-body" style="padding: 15px;">
 						<div class="form-group">
 							<label >Video URL</label><br>
 							<input type="url" class="form-control" id="title" placeholder="Upload your image">
@@ -45,20 +45,13 @@ Add news
 							<label>Video Description</label><br>
 							<textarea class="form-control" rows="6" placeholder="Enter ..." id="imagedescription" name="imagedescription"></textarea>
 						</div>
-
-						<div class="form-group">
-							<label for="Writer's ID">Description</label><br>
-						
-						
-						<!-- /.box-header -->
-						<div class="box-body pad">
-							<form>
-								<textarea class="summernote" name="description" rows="10" cols="80">
-									This is my textarea to be replaced with CKEditor.
-								</textarea>
-							</form>
-						</div>  
-						</div>
+<div class="form-group">
+							<label> Description</label><br>
+						<div class="mb-10">
+										<textarea class="textarea" placeholder="Place some text here"
+										style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+									</div>
+								</div>
 						<div class="form-group">
 							<div class="text text-danger">{{$errors->first('title')}}</div>
 							<label for="package name">SEO Title</label><br>
@@ -73,11 +66,13 @@ Add news
 						<br>
 						<div class="form-group">
 							<div class="text text-danger">{{$errors->first('description')}}</div>
-							<label for="Description">SEO Description</label><br>
-							<!-- /.box-header -->
-							<textarea class="summernote" rows="10" cols="80" name="description" >
-								This is my textarea to be replaced with CKEditor.
-							</textarea>
+							
+							<label> Description</label><br>
+						<div class="mb-10">
+										<textarea class="textarea" placeholder="Place some text here"
+										style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+									</div>
+								</div>
 						</div>
 						</div>
 
