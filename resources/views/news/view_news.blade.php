@@ -36,20 +36,20 @@ Add news
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>Rendering engine</th>
-                  <th>Browser</th>
-                  <th>Platform(s)</th>
-                  <th>Engine version</th>
-                  <th>CSS grade</th>
+                  <th>News Title</th>
+                  <th>Write Name</th>
+                  <th>Views</th>
+                  <th>Action</th>
+                  <th>Comments</th>
                 </tr>
                 </thead>
                 <tbody>
+                  @foreach($news as $news)
                 <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 4.0
+                  <td>{{e(str_limit($news->news_title,$limits='20'))}}</td>
+                  <td>{{e($news->writer_id)}}
                   </td>
-                  <td>Win 95+</td>
+                  <td>Views Count</td>
                   <td>                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
@@ -57,77 +57,17 @@ Add news
                     </button>
                     <div class="dropdown-menu">
                       <a class="dropdown-item" href="{{url('edit_news')}}">Edit</a>
-                      <a class="dropdown-item" href="{{url('show_news')}}">View</a>
+                      <a class="dropdown-item" href="{{route('shownews',$news->id)}}">View</a>
                       <a class="dropdown-item" href="#">Delete</a>
                       
                     </div>
                   </div>
                   
                 </div></td>
-                  <td>X</td>
+                  <td>No. of comments</td>
                 </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 5.0
-                  </td>
-                  <td>Win 95+</td>
-                  <td>5</td>
-                  <td>C</td>
-                </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 5.5
-                  </td>
-                  <td>Win 95+</td>
-                  <td>5.5</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 6
-                  </td>
-                  <td>Win 98+</td>
-                  <td>6</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Misc</td>
-                  <td>Links</td>
-                  <td>Text only</td>
-                  <td>-</td>
-                  <td>X</td>
-                </tr>
-                <tr>
-                  <td>Misc</td>
-                  <td>Lynx</td>
-                  <td>Text only</td>
-                  <td>-</td>
-                  <td>X</td>
-                </tr>
-                <tr>
-                  <td>Misc</td>
-                  <td>IE Mobile</td>
-                  <td>Windows Mobile 6</td>
-                  <td>-</td>
-                  <td>C</td>
-                </tr>
-                <tr>
-                  <td>Misc</td>
-                  <td>PSP browser</td>
-                  <td>PSP</td>
-                  <td>-</td>
-                  <td>C</td>
-                </tr>
-                <tr>
-                  <td>Other browsers</td>
-                  <td>All others</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>U</td>
-                </tr>
+ @endforeach
+
                 </tbody>
                 <tfoot>
                 <tr>

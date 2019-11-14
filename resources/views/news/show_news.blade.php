@@ -28,35 +28,38 @@ Add news
       <div class="row">
         <div class="col-12">
           <!-- Default box -->
+
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title">Categories</h3>
+              <h3 class="card-title">{{$news->categories}}</h3>
             </div>
             <div class="card-body">
              <div class="col-sm-9">
-              <h1 class="m-0 text-dark">अटेर गरे डोजर चलाउँछौं : प्रवक्ता चौधरी</h1>
+              <h1 class="m-0 text-dark">{{$news->news_title}}</h1>
             </div>
             <div style="text-align: right;">
-              <h4>2076/07/19</h4>           
-              <h4 class="m-0 text-dark">Writers Name</h1>
+              <h4>{{$news->created_at}}</h4>           
+              <h4 class="m-0 text-dark">{{$news->writer_id}}</h1>
 
-                <h4 class="m-0 text-dark">Views</h1>
+                <h4 class="m-0 text-dark">{{$ip}}</h1>
                 </div>
                 <div>
-                  News Description
+                  {{$news->news_description}}
                 </div>
                 <div class="col-sm-12">
-                  <h5 >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h5>
+                  <h5 >{{e($news->news)}}</h5>
 
                 </div>
                 
                 <div>
-                  <h5>SEO title</h5>
-                  <h5>SEO Keywords</h5>
-                  <h5>SEO Description</h5>
+                  <h5>{{e($news->seo_title)}}</h5>
+                  <h5>{{e($news->seo_keywords)}}</h5>
+                  <h5>{{e($news->seo_description)}}</h5>
                 </div>
 
               </div>
+
+
               <!-- /.card-body -->
               <button type="submit" class="btn btn-default bg-green " >Back</button>
             </div>

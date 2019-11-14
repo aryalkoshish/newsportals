@@ -37,17 +37,19 @@ Add news
 									<input type="file" class="form-control" id="title" placeholder="Upload your image">
 								</div>
 								<div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="fas fa-file"></i></span>
-                  </div>
-                  <input type="text" class="form-control" placeholder="File Title">
-                </div>
-                <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="fas fa-file"></i></span>
-                  </div>
-                  <input type="text" class="form-control" placeholder="File Description">
-                </div>
+									<div class="input-group-prepend">
+										<span class="input-group-text">
+											<i class="fas fa-heading"></i>
+										</span>
+									</div>
+									<input type="text" class="form-control" placeholder="File Title">
+								</div>
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="far fa-file-alt"></i></span>
+									</div>
+									<input type="text" class="form-control" placeholder="File Description">
+								</div>
 								
 
 								
@@ -63,17 +65,17 @@ Add news
 
 
 								<div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="fas fa-file"></i></span>
-                  </div>
-                  <input type="text" class="form-control" placeholder="SEO Title">
-                </div>
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fas fa-file"></i></span>
+									</div>
+									<input type="text" class="form-control" placeholder="SEO Title">
+								</div>
 								<div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="fas fa-file"></i></span>
-                  </div>
-                  <input type="text" class="form-control" placeholder="SEO Keywords">
-                </div>
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fas fa-tags"></i></i></span>
+									</div>
+									<input type="text" class="form-control" placeholder="SEO Keywords">
+								</div>
 								<div class="form-group">
 									<label>SEO Description</label><br>
 									<div class="mb-10">
@@ -97,4 +99,4 @@ Add news
 	</section>
 </div>
 
-	@endsection
+@endsection

@@ -30,22 +30,30 @@ Add news
 				<div class="col-12">
 					<div class="card">
 						<!-- form start -->
-						<form role="form">
+						<form action="{{url('store_news')}}" method="post" enctype="multipart/form-data">
+							{{ csrf_field() }}
 							<div class="box-body" style="padding: 15px;">
-								<div class="form-group">
-									<label >News Title</label><br>
-									<input type="title" class="form-control" id="title" placeholder="Enter news title">
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fas fa-heading"></i></span>
+									</div>
+									<input type="text" class="form-control" placeholder="News Title" name="news_title">
+								</div>
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fas fa-user-edit"></i></span>
+									</div>
+									<input type="text" class="form-control" placeholder="Writer Id" name="writer_id" >
 								</div>
 
-								<div class="form-group">
-									<label>News Description</label><br>
-									<textarea class="form-control" rows="6" placeholder="Enter ..." id="newsdescription" name="newsdescription"></textarea>
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="far fa-file-alt"></i></span>
+									</div>
+									<input type="text" class="form-control" placeholder="News Description" name="news_description">
 								</div>
 
-								<div class="form-group">
-									<label for="Writer's ID">Writer's ID</label><br>
-									<input type="input" class="form-control" id="writerid" placeholder="writer's ID">
-								</div>
+								
 
 								<div class="box-header">
 									<h3 class="box-title">News
@@ -54,20 +62,22 @@ Add news
 								</div>
 								<!-- /.box-header -->
 								<div class="mb-10">
-									<textarea class="textarea" placeholder="Place some text here"
+									<textarea class="textarea" placeholder="Place some text here" name="news" 
 									style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
 								</div>
 								
-								<div class="form-group">
-									<div class="text text-danger">{{$errors->first('title')}}</div>
-									<label for="package name">Title</label><br>
-									<input type="text" class="form-control" id="" name="title" value="{{old('title')}}">
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fas fa-file"></i></span>
+									</div>
+									<input type="text" class="form-control" placeholder="SEO Title" name="seo_title">
 								</div>
 								
-								<div class="form-group">
-									<div class="text text-danger">{{$errors->first('keyword')}}</div>
-									<label for="Alt-image">Keyword</label><br>
-									<input type="text" class="form-control" id="keyword" name="keyword" value="{{old('keyword')}}">
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fas fa-tags"></i></i></span>
+									</div>
+									<input type="text" class="form-control" placeholder="SEO Keywords" name="seo_keywords" >
 								</div>
 								
 								<div class="form-group">
@@ -75,46 +85,15 @@ Add news
 									<label for="Description">Description</label><br>
 									<!-- /.box-header -->
 									<div class="mb-10">
-										<textarea class="textarea" placeholder="Place some text here"
+										<textarea class="textarea" placeholder="Place some text here" name="seo_description" 
 										style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
 									</div>
 								</div>
 								<div class="form-group">
 									<!-- checkbox -->
-
-									
-									
-									<label>
-										<input type="checkbox">
-										Checkbox 1
-									</label>
-									
-									
-									<label>
-										<input type="checkbox">
-										Checkbox 2
-									</label>
-									
-									
-									<label>
-										<input type="checkbox">
-										Checkbox 3
-									</label>
-									
-									<label>
-										<input type="checkbox">
-										Checkbox 11
-									</label>
-									
-									<label>
-										<input type="checkbox">
-										Checkbox 12
-									</label>
-									
-									<label>
-										<input type="checkbox">
-										Checkbox 13
-									</label>
+<input type="checkbox" name="categories" value="news"> News<br>
+<input type="checkbox" name="categories" value="politics">Politics<br>
+<input type="checkbox" name="categories" value="International" checked> International<br>
 								</div>
 								<div class="col-sm-3" >
 									<button type="submit" class="btn btn-default bg-green " >Submit</button>

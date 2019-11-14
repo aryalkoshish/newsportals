@@ -19,17 +19,22 @@ Route::get('/test',function(){
 	return view('test');
 });
 
-Route::get('/add_news',function(){
-	return view('news.add_news');
-});
+// Route::get('/add_news',function(){
+// 	return view('news.add_news');
+// });
 
-Route::get('/view_news',function(){
-	return view('news.view_news');
-});
+Route::get('/add_news','NewsController@createnews')->name('createnews');
+Route::post('/store_news','NewsController@addnews')->name('addnews');
+Route::get('/view_news','NewsController@viewnews')->name('viewnews');
+Route::get('/show_news/{id}','NewsController@shownews')->name('shownews');
 
-Route::get('/show_news',function(){
-	return view('news.show_news');
-});
+// Route::get('/view_news',function(){
+// 	return view('news.view_news');
+// });
+
+// Route::get('/show_news',function(){
+// 	return view('news.show_news');
+// });
 
 route::get('/edit_news',function(){
 	return view('news.edit_news');
@@ -101,6 +106,10 @@ route::get('/show_audio',function(){
 
 route::get('/show_file',function(){
 	return view('media.show_file');
+});
+
+route::get('/tes',function(){
+	return view('media.test');
 });
 
 Auth::routes();
