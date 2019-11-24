@@ -95,6 +95,9 @@ Add news
 <input type="checkbox" name="categories" value="politics">Politics<br>
 <input type="checkbox" name="categories" value="International" checked> International<br>
 								</div>
+								<div class="form-group">
+									<input type="hidden" name="views" value="0">
+								</div>
 								<div class="col-sm-3" >
 									<button type="submit" class="btn btn-default bg-green " >Submit</button>
 								</div>

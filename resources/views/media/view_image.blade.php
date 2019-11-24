@@ -44,12 +44,14 @@ Add news
                   <th>Action</th>
                 </tr>
               </thead>
+
+
+
               <tbody>
+                @foreach($img as $news)
                 <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 4.0
-                  </td>
+                  <td>{{$news->id}}</td>
+                  
                   <td>Win 95+</td>
                   <td> 4</td>
                   <td><div class="input-group mb-3">
@@ -58,7 +60,7 @@ Add news
                         Action
                       </button>
                       <div class="dropdown-menu">
-                        <a class="dropdown-item" href="{{url('show_images')}}"><button>View</button></a>
+                        <a class="dropdown-item" href="{{route('showimage',$news->id)}}"><button>View</button></a>
                         
                         <a class="dropdown-item" href="#"><button  data-toggle="modal" data-target="#modal-danger">Delete</button></a>
                         
@@ -67,7 +69,7 @@ Add news
                     
                   </div></td>
                 </tr>
-                
+                @endforeach
               </tbody>
               <tfoot>
                 <tr>

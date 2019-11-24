@@ -31,11 +31,11 @@ Add news
 
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title">{{$news->categories}}</h3>
+              <h3 class="card-title">{{e($news->categories)}}</h3>
             </div>
             <div class="card-body">
              <div class="col-sm-9">
-              <h1 class="m-0 text-dark">{{$news->news_title}}</h1>
+              <h1 class="m-0 text-dark">{{e($news->news_title)}}</h1>
             </div>
             <div style="text-align: right;">
               <h4>{{$news->created_at}}</h4>           
@@ -44,7 +44,7 @@ Add news
                 <h4 class="m-0 text-dark">{{$ip}}</h1>
                 </div>
                 <div>
-                  {{$news->news_description}}
+                  {!! ($news->news_description) !!}
                 </div>
                 <div class="col-sm-12">
                   <h5 >{{e($news->news)}}</h5>
@@ -52,11 +52,14 @@ Add news
                 </div>
                 
                 <div>
-                  <h5>{{e($news->seo_title)}}</h5>
-                  <h5>{{e($news->seo_keywords)}}</h5>
-                  <h5>{{e($news->seo_description)}}</h5>
+                  <h5>SEO Title:: {{e($news->seo_title)}}</h5>
+                  <h5>SEO Keyword:: {{e($news->seo_keywords)}}</h5>
+                  <h5>SEO Description:: {!! ($news->seo_description) !!}</h5>
                 </div>
+               @foreach($sorted as $s)
+               {{$s}}&nbsp;
 
+               @endforeach
               </div>
 
 

@@ -31,8 +31,7 @@ Add news
 			<div class="row">
 				<div class="col-12">
 					<div class="card">
-						
-							<form method="post" enctype="multipart/form-data" action="{{route('storeimage')}}">
+						<form role="form">
 							<div class="box-body" style="padding: 15px;">
 								<style type="text/css">
 									.it .btn-orange
@@ -74,29 +73,39 @@ Add news
 										filter: alpha(opacity=0);
 									}
 								</style>
-							<!-- 	<div class="container">
+								<div class="container">
 									<div class="row">
-										<div class="col-sm-offset-2 col-sm-12"><br><br>
-											
+										<div class="col-sm-offset-2 col-sm-8"><br><br>
+											<div class="form-group">
+												<div class="input-group">
+													<input type="text" class="form-control" readonly>
+													<div class="input-group-btn">
+														<span class="fileUpload btn btn-success">
+															<span class="upl" id="upload">Upload single file</span>
+															<input type="file" class="upload up" id="up" onchange="readURL(this);" />
+														</span><!-- btn-orange -->
+													</div><!-- btn -->
+												</div><!-- group -->
+											</div><!-- form-group -->
 											<div class="form-group">
 												<div class="input-group">
 													<input type="text" class="form-control" readonly>
 													<div class="input-group-btn">
 														<span class="fileUpload btn btn-info">
 															<span class="upl" id="upload">Upload multiple file</span>
-															<input type="file" class="upload up" id="up" name="name[]" onchange="readURL(this);" multiple/>
-														</span>
-													</div>
-												</div>
-											</div>
+															<input type="file" class="upload up" id="up" onchange="readURL(this);" multiple/>
+														</span><!-- btn-orange -->
+													</div><!-- btn -->
+												</div><!-- group -->
+											</div><!-- form-group -->
 										</div>
 									</div>
-								</div> -->
-
-								<div class="form-group">
-									<label >Upload Image</label><br>
-									<input required type="file" class="form-control" name="images[]" placeholder="address" multiple>
 								</div>
+
+								<!-- <div class="form-group">
+									<label >Upload Image</label><br>
+									<input type="file" class="form-control" id="title" placeholder="Upload your image">
+								</div> -->
 								<div class="input-group mb-3">
 									<div class="input-group-prepend">
 										<span class="input-group-text"><i class="fas fa-heading"></i></span>
@@ -143,13 +152,13 @@ Add news
 										style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
 									</div>
 								</div>
-								<input type="submit" class="btn btn-default bg-green " >
+								<button type="submit" class="btn btn-default bg-green " >Submit</button>
 							</div>
-							</form>
+							
 						</div>
 
 					</form>
-				
+				</div>
 			</div>
 		</div>
 		<script type="text/javascript">

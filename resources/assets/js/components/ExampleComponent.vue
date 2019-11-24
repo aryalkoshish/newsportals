@@ -1,23 +1,23 @@
 <template>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Example Component</div>
-
-                    <div class="panel-body">
-                        I'm an example component!
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="container">
+    <div class="row justify-content-center mb-3" ref="imageupload"></div>
+        <div class="col-12 bg-dark text-white rounded py-3 my-2 text-center">Drop Image Here</div>
+</div>
 </template>
 
 <script>
-    export default {
-        mounted() {
-            console.log('Component mounted.')
-        }
-    }
+import Dropzone from 'dropzone':
+export default {
+data: function(){
+return{
+dropzone: null
+}
+},
+
+mounted() {
+this.dropzone = new Dropzone(this.$refs.imageupload,{
+    url: '/images'
+});
+}
+}
 </script>

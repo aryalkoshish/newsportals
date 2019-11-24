@@ -40,6 +40,10 @@ route::get('/edit_news',function(){
 	return view('news.edit_news');
 });
 
+Route::post('/images',"NewsController@storeimage")->name('storeimage');
+Route::get('/view_image',"NewsController@viewimages")->name('viewimages');
+Route::get('/show_image/{id}',"NewsController@showimage")->name('showimage');
+
 
 route::get('/media',function(){
 	return view('media.media');
@@ -61,9 +65,9 @@ route::get('/add_files',function(){
 	return view('media.add_files');
 });
 
-route::get('/view_image',function(){
-	return view('media.view_image');
-});
+// route::get('/view_image',function(){
+// 	return view('media.view_image');
+// });
 
 route::get('/edit_image',function(){
 	return view('media.edit_images');
@@ -93,9 +97,9 @@ Route::get('/edit_files',function(){
 	return view('media.edit_files');
 });
 
-Route::get('/show_images',function(){
-	return view('media.show_image');
-});
+// Route::get('/show_images',function(){
+// 	return view('media.show_image');
+// });
 Route::get('/show_video',function(){
 	return view('media.show_video');
 });
